@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>PRESSTALK</title>
+	
+	<script>
+	
+	var addListener = function() {
+    if ( window.addEventListener ) {
+        return function(el, type, fn) {
+            el.addEventListener(type, fn, false);
+        };
+    } else if ( window.attachEvent ) {
+        return function(el, type, fn) {
+            var f = function() {
+                fn.call(el, window.event);
+            };
+            el.attachEvent('on'+type, f);
+        };
+    } else {
+        return function(el, type, fn) {
+            element['on'+type] = fn;
+        }
+    }
+	}();
+		
+	
+	var element = document.getElementById('mainmenu');
+	addListener(element, 'click', handleClick);
+	
+	function handleClick(e) {
+    	var element = e.target || e.srcElement;
+    	element.className = 'current';
+	}
+
+	function toggleDisplay(objectID) {
+		var object = document.getElementById(objectID);
+		state = object.style.display;
+		if ( state == 'block' )
+			object.style.display = 'none';
+		else
+			object.style.display = 'block';
+	}
+	
+	function defineCurrentMenuItem(objectID) {
+		var object = document.getElementById(objectID);
+		object.className = 'current';
+	}
+
+	
+	</script>
+	
+</head>
+
+<body>
+
+<div id="header">
+	<div id="search">
+		<input type="text" name="search" size="20" value="Search" />
+	</div>
+	<div id="menu">
+		<ul id="mainmenu">
+			<li>POLITICS</li>
+			<li>MEDIA</li>
+			<li>BUSINESS</li>
+			<li>TECHNOLOGY</li>
+			<li>CULTURE</li>
+			<li>VIDEOS</li>
+		</ul>
+	</div>
+</div>
+
+<div id="container">
+
+	<div id="toptalk">
+		<h3>MEDIA</h3>
+		<h1>NDTV MetroNation to shut shop</h1>
+		<h2>Cost cutting at NDTV means more pain on its way</h2>
+		<h4>Kushan Mitra | Narendra Nag | Vir Sanghvi</h4>
+		<p>Doream ipso facto lection in the mactear of the fortrex as the poquewe bugdes laljumpify triuc knowpoderoma</p>
+	</div>
+
+</div>
+
+</body>
+
+</html>

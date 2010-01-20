@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Sales</title>
+	<link rel="stylesheet" href="../../../resources/css/typography.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="../../../resources/css/forms.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
+	
+	
+	<script src="../../../resources/scripts/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	
+	
+	<style type="text/css" media="screen">
+		body {
+			margin: 0 auto;
+			width: 600px;
+			font-family: Helvetica;
+			font-size: 70%;
+		}
+		
+		tbody tr.odd {background: #fff;}
+		
+	</style>
+	
+	<script type="text/javascript" charset="utf-8">
+
+		var materials = {
+
+				0:{"id":0, "material":"Choose","unit":""},
+				1:{"id":1, "material":"24 Kt Gold","unit":"Karat"},
+				2:{"id":2, "material":"22 Kt Gold","unit":"Karat"},
+				3:{"id":3, "material":"18 Kt Gold","unit":"Karat"},
+				4:{"id":4, "material":"14 Kt Gold","unit":"Karat"},
+				5:{"id":5, "material":"Diamonds - E/F VVSI", "unit":"Carat"},
+
+				"length":6,
+
+				select: function() {
+					var current_material_id = $("#material option:selected").val();
+					$("#unit").text(this[current_material_id]["unit"]);
+					$("#amount").focus();
+				},
+
+				init: function() {
+					var options = "";
+					for(i=0;i < materials.length; i++)
+					{
+						options += "<option value="+ materials[i]["id"] + ">" + materials[i]["material"] + "</option>";
+					}
+					$("#material").html(options);
+
+					$("#material").live("change",function() {
+						materials.select();
+					});
+				}
+		};
+
+		var Detail = function(id) {
+
+			this.id = id;
+
+			this.add = function()
+			{
+				this.material = $("#material option:selected").val();
+				this.unit = $("#unit").text();
+				this.amount = $("#amount").val();
+				this.cost_per_unit = $("#cost_per_unit").val();
+				this.sp_per_unit = $("#sp_per_unit").val();
+
+				this.add_to_table();
+			}
+
+			this.edit = function()
+			{
+				$("#material").val(this.material);
+				$("#unit").text(this.unit);
+				$("#amount").val(this.amount);
+				$("#cost_per_unit").val(this.cost_per_unit);
+				$("#sp_per_unit").val(this.sp_per_unit);
+
+				$("#material").focus();
+			}
+
+			this.set = function(material, unit, amount, cost_per_unit, sp_per_unit)
+			{
+				this.material = material;
+				this.unit = unit;
+				this.amount = amount;
+				this.cost_per_unit = cost_per_unit;
+				this.sp_per_unit = sp_per_unit;
+
+				this.add_to_table();
+			}
+
+			this.remove = function()
+			{
+				var cp = parseInt($("#cost_price").val()) - (this.cost_per_unit * this.amount);
+				$("#cost_price").val(cp);
+				var sp = parseInt($("#sale_price").val()) - (this.sp_per_unit * this.amount);
+				$("#sale_price").val(sp);
+
+				var element = "#detail_" + this.id;
+				$(element).remove();
+				this.id = null;
+			}
+
+		}
+
+
+		Detail.prototype.add_to_table = function() {
+
+			var cp = parseInt($("#cost_price").val()) + (this.cost_per_unit * this.amount);
+			$("#cost_price").val(cp);
+			var sp = parseInt($("#sale_price").val()) + (this.sp_per_unit * this.amount);
+			$("#sale_price").val(sp);
+
+
+			var tr = "<tr id='detail_" + this.id +"'>"
+
+			tr += "<td>" + materials[this.material]["material"] + "</td>"
+			tr += "<td>" + this.amount + "</td>"
+			tr += "<td>" + this.unit + "</td>"
+			tr += "<td>" + this.cost_per_unit + "</td>"
+			tr += "<td>" + this.sp_per_unit + "</td>"
+			tr += "<td><a href='#' onclick='product.remove_detail(" + this.id + ")'>x</a></td>"
+			tr += "</tr>"
+
+			$("#detail_list tbody").append(tr)
+
+			$("#material").val(0);
+			$("#unit").text("");
+			$("#amount").val("");
+			$("#cost_per_unit").val("");
+			$("#sp_per_unit").val("");
+
+			$("#material").focus();
+		}
+
+
+		var Product = function(id) {
+
+			this.id = id;
+			this.details = new Array();
+			this.no_of_details = 0;
+
+			this.add_detail = function() {
+				this.details[this.no_of_details] = new Detail(this.no_of_details);
+				this.details[this.no_of_details++].add();
+			}
+
+			// To be used when loading existing products
+			this.set_detail = function(material, unit, amount, cost_per_unit, sp_per_unit) {
+				this.details[this.no_of_details] = new Detail(this.no_of_details);
+				this.details[this.no_of_details].set_details(material, unit, amount, cost_per_unit, sp_per_unit);
+			}
+
+			this.remove_detail = function(id)
+			{
+				this.details[id].remove();
+				this.details[id] = null;
+				this.no_of_details--;
+			}
+
+			this.save = function() {
+				this.supplier_id = $("#supplier option:selected").val();
+				this.supplier = $("#supplier option:selected").text();
+				this.code = $("#product_code").val();
+				this.title = $("#product_title").val();
+				this.cost_price = $("#cost_price").val();
+				this.sale_price = $("#sale_price").val();
+
+				var post_data = {"id":this.id, "supplier":this.supplier_id, "code":this.code, "title":this.title, "details":this.details, "cost_price":this.cost_price, "sale_price":this.sale_price};
+				/*
+				$.post(	"url",
+							 	post_data,
+							 	function(data)
+								{
+									if(data.id <= 0)
+										alert("Error saving product.");
+									else
+									{
+										this.id = data.id;
+									}
+								},
+								"json"
+							);
+				*/
+
+				var tr = "<tr id='product_" + this.id +"'>"
+
+				tr += "<td>" + this.code + "</td>"
+				tr += "<td>" + this.title + "</td>"
+				tr += "<td>" + this.supplier + "</td>"
+				tr += "<td>" + this.sale_price + "</td>"
+				tr += "</tr>"
+
+				$("#product_list tbody").append(tr)
+			}
+		}
+
+
+		$(document).ready(function() {		
+
+		});
+
+	</script>
+</head>
+
+<body id="sales" onload="">
+	<h3>bespoke</h3>
+	<h2>invoice</h2>
+	
+	<input type="hidden" name="invoice_id" value="" id="invoice_id">
+	
+	<table border="0" cellspacing="1" cellpadding="5">
+		<thead>
+			<tr>
+				<th>Code</th>
+				<th>Product</th>
+				<th>Sale Price</th>
+				<th>Discount</th>
+				<th>Net Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td><label for="code">Code</label><input type="text" name="code" value="" id="code" size="10"></td>
+				<td><label for="product">Product</label><input type="text" name="product" value="" id="product"></td>
+				<td><span id="sale_price"></span></td>
+				<td><label for="discount">Discount</label><input type="text" name="discount" value="" id="discount" size="10"></td>
+				<td><br/><input type="button" name="add_to_invoice" value=" Add " id="add_to_invoice"></td>
+			</tr>
+		</tfoot>
+	</table>
+	
+</body>
+

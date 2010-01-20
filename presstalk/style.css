@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
+	margin: 0 auto;
+}
+
+.clear {
+	clear: both;
+}
+
+#header {
+	width: 100%;
+	height: 150px;
+	background:#5d5959 url('presstalk.png') no-repeat fixed;
+	border-bottom: #fff dotted 2px;
+}
+
+#header #search {
+	display: block;
+	float: right;
+	padding: 20px 20px 20px 0px;
+}
+
+#header #menu {
+	display: block;
+	clear:both;
+	float: left;
+	margin: 69px 0 2px 500px;
+}
+
+#header #menu ul {
+	margin:0;
+	list-style: none;
+}
+
+#header #menu li {
+	display: block;
+	float: left;
+	padding: 2px 15px 0 15px;
+	background: #000;
+	color: #fff;
+	border-top: #5d5959 dotted 2px;
+	border-right: #5d5959 dotted 2px;
+	border-bottom: #fff dotted 2px;
+	border-left: #5d5959 dotted 2px;
+	font-size: 93%;
+}
+
+#header #menu li:hover {
+	background: #c01001;
+	color: #fff;
+}
+
+#header #menu .current {
+	background: #fff;
+	color: #5D5959;
+}
+
+#container {
+	clear: both;
+	display: block;
+	float: left;
+	
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px 20px 10px 20px;
+
+	background: #fff;
+}
+
+#toptalk {
+	display: block;
+	float: left;
+	padding: 0 20px 10px 20px;
+	border: #5d5959 dashed 1px;
+}
+
+#toptalk h3 {
+	display: block;
+	float:left;
+	background: #5d5959;
+	padding: 5px 40px 5px 20px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#toptalk h1 {
+	clear:both;
+	display: block;
+	padding: 5px 10px 5px 0px;
+	color: #fc1a00;
+	font-size: 30px;
+	font-weight: bold;
+}

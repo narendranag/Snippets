@@ -1,0 +1,53 @@
+<!-- Dashboard.html -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Buzz Tracker</title>
+	
+	<script>
+		
+	function toggleDisplay(objectID) {
+		var object = document.getElementById(objectID);
+		state = object.style.display;
+		if ( state == 'block' )
+			object.style.display = 'none';
+		else
+			object.style.display = 'block';
+	}
+	
+	</script>
+	
+</head>
+
+<body>
+	<div id="header"><img src="assets/buzztracker.png"></div>
+	<div class="clear"></div>
+	<div class="dashboard">
+		<h2>Dashboard</h2>
+
+<!-- START PHP CODE INSERT HERE -->
+
+		<div class="trackername" id="trackerUID">Infosys</div>
+		
+		<div class="trackerdetails">30 <a href="#" onclick="toggleDisplay('Infosys')">+</a></div>
+		
+		<div class="details" id="Infosys">
+			<p>Stuff about Infosys<p>
+			<p>Spread over multiple lines</p>
+		</div>
+
+<!-- THE END -->
+
+		<div class="trackername">Wipro</div><div class="trackerdetails">20 <a href="#" onclick="toggleDisplay('Wipro')">+</a></div>
+		<div class="details" id="Wipro">
+			<p>Stuff about Wipro</p>
+			<p>Spread over multiple lines</p>
+		</div>
+		<div class="clear"></div>
+		<p class="controls">Additional Dashboard Controls</p>
+	</div>
+</body>
+</html>

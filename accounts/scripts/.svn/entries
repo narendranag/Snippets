@@ -1,0 +1,68 @@
+8
+
+dir
+13
+http://workerbee@workerbee.svn.beanstalkapp.com/workerbee/trunk/scripts
+http://workerbee@workerbee.svn.beanstalkapp.com/workerbee
+
+
+
+2009-03-02T14:57:48.060317Z
+2
+workerbee
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+fdc2c627-49ac-4099-b3d9-ed43bd36bf50
+
+i18n
+dir
+
+date.js
+file
+
+
+
+
+2009-03-02T16:03:29.000000Z
+3bf14e1370f600f28e9bd976d11da00d
+2009-03-02T14:57:48.060317Z
+2
+workerbee
+
+jquery-ui-1.5.3.min.js
+file
+
+
+
+
+2009-03-02T16:03:29.000000Z
+f1a1a7abe9256daeac33e700b62daab5
+2009-03-02T14:57:48.060317Z
+2
+workerbee
+has-props
+
+jquery-1.2.6.min.js
+file
+
+
+
+
+2009-03-02T16:03:29.000000Z
+a9331828c517ac5d97f93b3cfdbcc9bc
+2009-03-02T14:57:48.060317Z
+2
+workerbee
+

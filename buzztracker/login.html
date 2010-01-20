@@ -1,0 +1,39 @@
+<!-- Login.html -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Buzz Tracker</title>
+	
+	<script>
+		
+	function toggleDisplay(objectID) {
+		var object = document.getElementById(objectID);
+		state = object.style.display;
+		if ( state == 'block' )
+			object.style.display = 'none';
+		else
+			object.style.display = 'block';
+	}
+	
+	</script>
+	
+</head>
+
+<body>
+	<div id="header"><img src="assets/buzztracker.png"></div>
+	<div class="clear"></div>
+	<div class="contentbox">
+		<form>
+		<h2>Welcome</h2>
+		<p><input type="text" name="username" value="User Name" size="24" /></p>
+		<p><input type="password" name="password" value="Password" size="24" /></p>
+		<p><input type="button" value=" Login " /></p>
+		</form>
+
+	</div>
+
+</body>
+</html>

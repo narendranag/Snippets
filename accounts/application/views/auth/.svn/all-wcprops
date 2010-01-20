@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/workerbee/!svn/ver/2/trunk/system/application/views/auth
+END
+logout.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/workerbee/!svn/ver/2/trunk/system/application/views/auth/logout.php
+END
+register.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/workerbee/!svn/ver/2/trunk/system/application/views/auth/register.php
+END
+reg_success.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/workerbee/!svn/ver/2/trunk/system/application/views/auth/reg_success.php
+END
+login.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/workerbee/!svn/ver/2/trunk/system/application/views/auth/login.php
+END

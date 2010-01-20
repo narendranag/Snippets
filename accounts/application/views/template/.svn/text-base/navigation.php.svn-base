@@ -1,0 +1,7 @@
+<div id="menu">
+	<ul>
+	<li><a href="/index.php/profile/"><img src="/img/icons/folder_find.png" border="0" title="Back to search"><br/>Search</a></li>
+	<li><a href="/index.php/profile/edit"><img src="/img/icons/user_add.png" border="0" title="Add Profile"><br/>Add Profile</a></li>
+	<li><a href="/index.php/profile/logout"><img src="/img/icons/door_out.png" border="0" title="logout"><br/>Logout</a></li>
+	</ul>
+</div>

@@ -1,0 +1,54 @@
+8
+
+dir
+13
+http://workerbee@workerbee.svn.beanstalkapp.com/workerbee/trunk/css/blueprint/plugins/fancy-type
+http://workerbee@workerbee.svn.beanstalkapp.com/workerbee
+
+
+
+2009-03-02T14:57:48.060317Z
+2
+workerbee
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+fdc2c627-49ac-4099-b3d9-ed43bd36bf50
+
+screen.css
+file
+
+
+
+
+2009-03-02T16:03:31.000000Z
+9c812085f476433020d69cea17115cc6
+2009-03-02T14:57:48.060317Z
+2
+workerbee
+has-props
+
+readme.txt
+file
+
+
+
+
+2009-03-02T16:03:31.000000Z
+4e88733cdf0edfd23cc565790a70ac9f
+2009-03-02T14:57:48.060317Z
+2
+workerbee
+has-props
+

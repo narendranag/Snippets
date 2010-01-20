@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/workerbee/!svn/ver/2/trunk/system/application/libraries/plugin_layer/support
+END
+xajaxCallableObject.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/workerbee/!svn/ver/2/trunk/system/application/libraries/plugin_layer/support/xajaxCallableObject.inc.php
+END
+xajaxEvent.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/workerbee/!svn/ver/2/trunk/system/application/libraries/plugin_layer/support/xajaxEvent.inc.php
+END
+xajaxUserFunction.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/workerbee/!svn/ver/2/trunk/system/application/libraries/plugin_layer/support/xajaxUserFunction.inc.php
+END

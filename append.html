@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Resource Angle :: </title>
+  	<link rel="stylesheet" href="append_files/screen.css" type="text/css" media="screen, projection">
+  	<link rel="stylesheet" href="append_files/print.css" type="text/css" media="print"> 
+  	<!--[if IE]>
+    	<link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection" />
+  	<![endif]-->
+	<link rel="stylesheet" href="append_files/screen_002.css" type="text/css" media="screen, projection">
+	
+<style type="text/css">/**
+ * Highlight style classes
+ * .a background color
+ * .b underline
+ * .c underline + font color
+ */
+ 
+@media screen{
+em.diigoHighlight {
+	text-align:inherit;
+	text-decoration: inherit;
+	line-height:inherit;
+	font:inherit;
+	color:inherit;
+	display:inline;
+}
+
+em.diigoHighlight.a {
+	background-color: #FF9;
+}
+
+em.diigoHighlight.b, em.diigoHighlight.c {
+	border-bottom: solid 2px #FF9;
+}
+
+em.diigoHighlight.c {
+	color: #000099;
+}
+
+/*with private inline comments*/
+em.diigoHighlight.a.commented {
+	background-color: #ABD5FF;
+}
+
+em.diigoHighlight.b.commented, em.diigoHighlight.c.commented {
+	border-bottom-color: #ABD5FF;
+}
+
+/*shared to group*/
+em.diigoHighlight.a.group.commented {
+	background-color: #FFC4D8;
+}
+
+em.diigoHighlight.b.group.commented, em.diigoHighlight.c.group.commented {
+	border-bottom-color: #FFC4D8;
+}
+
+/*with public inline comments*/
+em.diigoHighlight.a.public.commented {
+	background-color: #B2E57E;
+}
+
+em.diigoHighlight.b.public.commented, em.diigoHighlight.c.public.commented {
+	border-bottom-color: #B2E57E;
+}
+
+/*highlight label*/
+.diigoHighlight .diigoHighlightLabel sup {
+	/*float:left;
+	margin-left:-10px;
+	text-align:right;
+	height:11px;
+	width:10px;
+	vertical-align:super;*/
+	font:normal normal normal 8px/8px "lucida grande",tahoma,verdana,arial,sans-serif;
+	text-decoration:none;
+	background-color:inherit;
+	cursor:default;
+}
+
+
+/*image highlight*/
+/*no inline comments*/
+img.diigoHighlight {
+	cursor: pointer; 
+	outline:4px solid #FF9;
+}
+/*with private inline comments*/
+img.diigoHighlight.commented {
+	outline-color: #ABD5FF;
+}
+/*shared to group*/
+img.diigoHighlight.group.commented {
+	outline-color: #FFC4D8;
+}
+/*with public inline comments*/
+img.diigoHighlight.public.commented {
+	outline-color: #B2E57E;
+}
+/*float note*/
+div.diigoHighlight.type_2 {
+	position:absolute;
+	width:37px;
+	height:31px;
+	text-align:center;
+	background:transparent url('chrome://diigotb/skin/float_icon.png') no-repeat 50% 50%;
+	z-index:9996;
+}
+div.diigoHighlight.type_2 span {
+	position:relative;
+	color:#333;
+	font:normal 13px Verdana, Arial, Helvetica, sans-serif;
+	top: 4px;
+	cursor: default;
+}
+/*
+* html div.diigoHighlight.type_2{
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,sizingMethod=scale, src="http://www.diigo.com/javascripts/webtoolbar/images/float_icon.png");
+	overflow:hidden;
+	background:none;
+}
+*/
+
+
+/*mouse over effect*/
+/*
+.diigoHighlight.id_190e5778b533dc0fa1b1660653a4f6f5 {outline: 2px dotted green !important;}
+*/
+
+
+
+/*Clip video*/
+div.diigoClipVideo{
+	float:left;
+	height:16px;
+	padding:0 16px 0 6px;
+	background:#f5f5f5 url(chrome://diigotb/skin/toolbar-clip-bg.gif) no-repeat right 0;
+	border:1px solid #ccc;
+	border-bottom-width:0;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	z-index:999;
+	position:absolute;
+}
+
+div.diigoClipVideo.clipped {
+  background-position: right -32px; left: 717px; top: 135px;
+}
+
+	/*div.diigoClipVideo a{
+		font-weight:bold;
+		font-size:10px;
+		line-height:16px;
+		text-decoration:underline;
+		color:#03f;
+		margin-right:6px
+	}
+	div.diigoClipVideo a:hover,.diigolet .diigoClipVideo a:active{
+		color:#00f
+	}
+  */
+	div.diigoClipVideo span{
+		font-weight:bold;
+		font-size:10px;
+		line-height:16px;
+		text-decoration:underline;
+		color:#03f;
+		cursor:pointer;
+		margin-right:6px
+	}
+	div.diigoClipVideo span:hover,div.diigoClipVideo span:active{
+		color:#00f
+	}
+	/*.diigolet input{
+		font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+		font-size:9px;
+	}*/
+}
+
+@media print{
+em.diigoHighlight.a, em.diigoHighlight.b, em.diigoHighlight.c {
+	border-bottom:0.5pt dashed Black;
+}
+
+/*with private inline comments*/
+em.diigoHighlight.a.commented, em.diigoHighlight.b.commented, em.diigoHighlight.c.commented {
+	border-bottom-style:solid;
+}
+
+/*shared to group*/
+em.diigoHighlight.a.group.commented, em.diigoHighlight.b.group.commented, em.diigoHighlight.c.group.commented {
+	border-bottom-width:1pt;
+}
+
+/*with public inline comments*/
+em.diigoHighlight.a.public.commented, em.diigoHighlight.b.public.commented, em.diigoHighlight.c.public.commented {
+	border-bottom-width:1pt;
+}
+
+/*image highlight*/
+/*no inline comments*/
+img.diigoHighlight {
+	border:0.5pt dashed Black
+}
+/*with private inline comments*/
+img.diigoHighlight.commented {
+	border-style:solid;
+}
+/*shared to group*/
+img.diigoHighlight.group.commented {
+	border-width:1pt;
+}
+/*with public inline comments*/
+img.diigoHighlight.public.commented {
+	border-width:1pt;
+}
+/*float note*/
+div.diigoHighlight.type_2 {
+	display:none
+}
+div.diigoHighlight.type_2 span {
+	display:none
+}
+}</style><style id="diigo-activeHighlight" type="text/css">dummyRuleForDigg{}</style></head><body>
+<div class="n_header">
+		<h3>PROJECT WORKERBEE</h3>
+		<span><a href="http://www.naglive.com/index.php/legacy">Search</a>  |  <a href="http://www.naglive.com/index.php/legacy/edit">Add Profile</a></span>
+</div>
+<div class="container">
+
+<form action="http://www.naglive.com/index.php/legacy/save" method="post">
+<input name="id" value="108" type="hidden"><fieldset class="alt">
+	<legend>Personal</legend>
+	<div class="span-6">
+	<label>First Name 
+		<br><input name="firstname" value="Rahul" id="firstname" size="25" type="text">		</label>
+	</div>
+	<div class="span-6">
+	<label>Middle Name
+		<br><input name="middlename" value="" id="middlename" size="25" type="text">		</label>
+	</div>
+	<div class="span-6">
+	<label>Last Name<br>
+		<input name="lastname" value="Aggarwal" id="lastname" size="25" type="text">		</label>
+	</div>
+
+	<div class="clear">&nbsp;</div>
+	
+	<div class="span-3">
+	<label>Gender<br>
+		<select name="gender">
+<option value="M">Male</option>
+<option value="F">Female</option>
+</select></label>
+	</div>
+	<div class="span-3">
+	<label>Date of Birth<br>
+		<input name="dob" value="" id="dob" size="10" type="text"></label>
+	</div>
+
+<div class="clear">&nbsp;</div>
+
+	<div class="span-3">
+	<label>Address Type<br>
+		<select name="gender">
+<option value="M">Official</option>
+<option value="F">Mailing</option>
+<option value="F">Permanent</option>
+<option value="F">Old/Archived</option>
+</select></label>
+	</div>
+	
+<div class="clear">&nbsp;</div>
+
+<div class="span-16">
+<label>Address<br />
+	<input name="address" value="" id="location" size="30" type="text"></label>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+<div class="span-4">
+<label>City<br />
+	<input name="address" value="" id="location" size="10" type="text"></label>
+</div>
+
+<div class="span-4">
+<label>State<br />
+	<input name="address" value="" id="location" size="10" type="text"></label>
+</div>
+
+<div class="span-4">
+<label>Pin Code<br />
+	<input name="address" value="" id="location" size="10" type="text"></label>
+</div>
+
+<div class="span-4">
+<label>Country<br />
+	<input name="address" value="" id="location" size="10" type="text"></label>
+</div>
+
+
+<div class="clear">&nbsp;</div>
+
+
+
+	<div class="span-5">
+	<label>Email Address<br>	
+		<input name="email" value="RA1981@rediffmail.com" id="email" size="25" type="text"></label>
+	</div>
+	
+	<div class="span-3">
+	<label>Mobile Number<br>
+		<input name="phone" value="9821118848" id="phone" size="25" type="text"></label>
+	</div>
+</fieldset>
+
+<fieldset class="alt">
+	<legend>Professional</legend>
+	
+	<div class="span-4">
+	<label>Industry<br>
+		<input name="industry" value="Wealth" id="industry" size="10" type="text"></label>
+	</div>
+
+	<div class="span-4">
+	<label>Segment<br>	
+		<input name="segment" value="" id="segment" size="10" type="text"></label>
+	</div>
+
+	<div class="span-4">
+
+	<label>Function<br>
+		<input name="function" value="" id="function" size="10" type="text"></label>
+	</div>
+
+	<div class="span-4">
+	<label>Role<br>
+		<input name="role" value="" id="role" size="10" type="text"></label>
+	</div>
+
+	<div class="clear">&nbsp;</div>
+	
+	<div class="span-5">
+	<label>Company<br>
+		<input name="organisation" value="ICICI Prudential" id="organisation" size="25" type="text"></label>
+	</div>
+	<div class="span-5">
+	<label>Designation<br>
+		<input name="designation" value="Unit Manager" id="designation" size="25" type="text"></label>
+	</div>
+	
+	<div class="span-5">
+	<label>Grade<br>	
+		<input name="grade" value="" id="grade" size="25" type="text"></label>
+	</div>
+	<div class="span-5 last">
+	<label>Salary<br>
+		<input name="salary" value="3.25" id="salary" size="25" type="text"></label>
+	</div>
+</fieldset>
+
+<fieldset class="alt">
+	<legend>Qualifications</legend>
+	
+	<div class="span-5">
+	<label>Institute<br>
+		<input name="institute" value="" id="institute" size="25" type="text"></label>
+	</div>
+	
+	<div class="span-5">
+	<label>Degree<br>
+		<input name="degree" value="" id="degree" size="25" type="text"></label>
+	</div>
+	
+	<div class="span-5 last">
+	<label>Batch<br>
+		<input name="batch" value="" id="batch" size="25" type="text"></label>
+	</div>
+
+</fieldset>
+<fieldset class="alt">
+	<legend>Comments</legend>
+	<textarea name="comments" cols="90" rows="12" id="comments"> 
+</textarea></fieldset>
+<p style="clear: both;"><input name="submit" value="Submit" type="submit"><input value="Cancel" type="reset"></p>		</form></div>
+</body></html>
